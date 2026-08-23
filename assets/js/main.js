@@ -1,3 +1,11 @@
+window.addEventListener('load', () => {
+  const hash = location.hash;
+  const element = document.querySelectorAll("a[href*='" + hash + "']" );
+  if (element.length > 0) {
+    showContent(hash.replace('#', ''));
+  }
+});
+
 function showContent(name) {
     const page = document.getElementsByClassName('content');
     const bg = document.getElementById('status-bg')
